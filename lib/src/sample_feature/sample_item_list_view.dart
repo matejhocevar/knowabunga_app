@@ -33,8 +33,12 @@ class SampleItemListView extends StatelessWidget {
 
           return ListTile(
             title: Text('SampleItem ${item.id}'),
-            leading: const CircleAvatar(
-              foregroundImage: AssetImage('assets/images/flutter_logo.png'),
+            leading: Container(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.greenAccent,
+              ),
+              width: 64,
             ),
             onTap: () {
               Navigator.restorablePushNamed(

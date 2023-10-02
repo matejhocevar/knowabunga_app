@@ -1,0 +1,218 @@
+{
+  "day_1": [
+    {
+      "time_start": "8:45", "time_end": "9:30",
+      "location": "Hotel Krvavec",
+      "title": "Breakfast",
+      "description": "",
+      "image": "assets/images/food_and_drink/breakfast.jpg",
+      "tags": [],
+      "speakers": [],
+      "type": "food_and_drink"
+    },
+    {
+      "time_start": "9:30", "time_end": "9:40",
+      "location": "Hotel Krvavec",
+      "title": "Introduction & Welcome",
+      "description": "",
+      "image": "assets/images/logo.png",
+      "tags": [],
+      "speakers": [],
+      "type": "other"
+    },
+    {
+      "time_start": "9:40", "time_end": "10:10",
+      "location": "Hotel Krvavec",
+      "title": "Go Beyond: The Power of Growth Mindset",
+      "description": "Exploring the power of adopting a growth mindset. Discover the key differences between fixed and growth mindsets, dive into the science behind it, and gain practical strategies to develop your own growth mindset.",
+      "image": "assets/images/talks/tia-mavric.jpeg",
+      "tags": ["Leadership & Interpersonal skills"],
+      "speakers": ["Tia Mavrič"],
+      "type": "talk"
+    },
+    {
+      "time_start": "10:20", "time_end": "11:00",
+      "location": "Hotel Krvavec",
+      "title": "What Makes a Senior Engineer, Senior?",
+      "description": "Our panel will navigate the various facets that shape a senior engineer, including technical skills, soft skills, and professional attitude. Join us for an engaging discussion on the diverse perspectives surrounding seniority in the engineering world.",
+      "image": "assets/images/discussion_panels/discussion_panel.jpg",
+      "tags": ["Discussion Panel"],
+      "speakers": [
+        "Nera Božin",
+        "Sašo Vučič",
+        "Eva Sever",
+        "Erik Drobne",
+        "Miha Hribar"
+      ],
+      "type": "discussion_panel"
+    },
+    {
+      "time_start": "11:10", "time_end": "12:00",
+      "location": "Hotel Krvavec",
+      "title": "How can Development & Design Inspire Each Other to Reach Beyond the Ordinary Results?",
+      "description": "Join us as we take you on a journey into the world of better collaboration between designers and developers. Find out how this teamwork can lead to impressive results. Learn how design can push developers, and how developers can push design, all for better outcomes.",
+      "image": "assets/images/talks/leon-van-bakel.jpeg",
+      "tags": ["Design & Product"],
+      "speakers": ["Leon van Bakel", "Matej Hočevar"],
+      "type": "talk"
+    },
+    {
+      "time_start": "12:00", "time_end": "13:00",
+      "location": "Hotel Krvavec",
+      "title": "Lunch",
+      "description": "",
+      "image": "assets/images/food_and_drinks/lunch.jpg",
+      "tags": [],
+      "speakers": [],
+      "type": "food_and_drink"
+    },
+    {
+      "time_start": "13:00", "time_end": "13:30",
+      "location": "Hotel Krvavec",
+      "title": "How I Wasn't Sure What I Was Doing but I Did it Anyway",
+      "description": "A short story, and architecture walk-through, about trying to merge Spotify and Tinder. And how it made me venture out of my frontend comfort zone and into the wild world of AWS. Did it work? Can it work better? Did it go bankrupt before it even started? Let's find out!",
+      "image": "assets/images/talks/wiktor-chojnacki.jpeg",
+      "tags": ["War Stories From the Trenches"," Engineering & Technical"],
+      "speakers": ["Wiktor Chojnacki"],
+      "type": "talk"
+    },
+    {
+      "time_start": "13:40", "time_end": "14:10",
+      "location": "Hotel Krvavec",
+      "title": "The Social Part of Digital Development",
+      "description": "I want to build on last year's talk about the history of Agile and how to best organise digital development efforts by combining it with insights from Domain Driven Design, Team topologies, and Socio-technical systems.",
+      "image": "assets/images/talks/marko-jukic.jpeg",
+      "tags": ["Leadership & Interpersonal skills"],
+      "speakers": ["Marko Jukić"],
+      "type": "talk"
+    },
+    {
+      "time_start": "14:20", "time_end": "14:50",
+      "location": "Hotel Krvavec",
+      "title": "GCP Cloud Run Optimizations",
+      "description": "During my time with IKEA I was tasked with improving performance of a baseload of ~80 million messages. It initially took 40 hours to complete and after all the performance improvements I was able to get it down to 2h 30mins.",
+      "image": "assets/images/talks/miha-hribar.jpeg",
+      "tags": ["Engineering & Technical", "War Stories From the Trenches"],
+      "speakers": ["Miha Hribar"],
+      "type": "talk"
+    },
+    {
+      "time_start": "15:00", "time_end": "15:30",
+      "location": "Hotel Krvavec",
+      "title": "Fika",
+      "description": "",
+      "image": "assets/images/food_and_drinks/fika.jpg",
+      "tags": [],
+      "speakers": [],
+      "type": "food_and_drink"
+    },
+    {
+      "time_start": "15:30", "time_end": "16:20",
+      "location": "Hotel Krvavec",
+      "title": "Using chat GPT and AI in Software Engineering",
+      "description": "Our panel will navigate the various facets that shape a senior engineer, including technical skills, soft skills, and professional attitude. Join us for an engaging discussion on the diverse perspectives surrounding seniority in the engineering world.",
+      "image": "assets/images/discussion_panels/discussion_panel.jpg",
+      "tags": ["Discussion Panel"],
+      "speakers": [
+        "Biserka Cvetkovska",
+        "Matej Hočevar",
+        "Luka Prebil Grintal",
+        "Domen Gabrovšek",
+        "Dunja Rosina"
+      ],
+      "type": "discussion_panel"
+    },
+    {
+      "time_start": "16:30", "time_end": "17:00",
+      "location": "Hotel Krvavec",
+      "title": "Smells Like Team Spirit",
+      "description": "Deep dive into the activities, processes and meeting bon-ton which built the story of the Fixa team.",
+      "image": "assets/images/talks/simon-bohlin.jpeg",
+      "tags": ["Leadership & Interpersonal skills"],
+      "speakers": ["Simon Bohlin"],
+      "type": "talk"
+    },
+    {
+      "time_start": "17:00", "time_end": "17:15",
+      "location": "Hotel Krvavec",
+      "title": "Closing Remarks",
+      "description": "",
+      "image": "assets/images/logo.png",
+      "tags": [],
+      "speakers": [],
+      "type": "other"
+    }
+  ],
+  "day_2": [
+    {
+      "time_start": "10:00", "time_end": "13:00",
+      "location": "Krvavec",
+      "title": "Mountain Go-Karting",
+      "description": "",
+      "image": "assets/images/activities/go_karting.jpeg",
+      "tags": ["sport"],
+      "speakers": [],
+      "type": "activity"
+    },
+    {
+      "time_start": "10:00", "time_end": "13:00",
+      "location": "Krvavec",
+      "title": "Climbing Tower",
+      "description": "The climbing tower gives visitors a fun tryout in sports climbing. The tower is made up of four sides of varying complexity, from the lightest to the most difficult directions.",
+      "image": "assets/images/activities/climbing.jpeg",
+      "tags": ["sport"],
+      "speakers": [],
+      "type": "activity"
+    },
+    {
+      "time_start": "10:00", "time_end": "13:00",
+      "location": "Krvavec",
+      "title": "Archery",
+      "description": "Archery range with different targets, suitable for groups or individuals, but always under the supervision of the instructor.",
+      "image": "assets/images/activities/archery.jpeg",
+      "tags": ["sport"],
+      "speakers": [],
+      "type": "activity"
+    },
+    {
+      "time_start": "10:00", "time_end": "13:00",
+      "location": "Krvavec",
+      "title": "Tubing",
+      "description": "The conveyor belt brings you to the start of the track, followed by fun and joy full of downhill by air-pillow along 100 m long winding track.",
+      "image": "assets/images/activities/tubing.jpeg",
+      "tags": ["sport"],
+      "speakers": [],
+      "type": "activity"
+    },
+    {
+      "time_start": "10:00", "time_end": "13:00",
+      "location": "Krvavec",
+      "title": "Slackline",
+      "description": "Attractive polygon consisting of elastic ropes, strained between trees, 40-50 cm above the ground. The participants try to overcome the polygon without touching the ground. The activity provides plenty of fun, is completely safe and develops motor skills.",
+      "image": "assets/images/activities/slackline.jpeg",
+      "tags": ["sport"],
+      "speakers": [],
+      "type": "activity"
+    },
+    {
+      "time_start": "10:00", "time_end": "13:00",
+      "location": "Krvavec",
+      "title": "Disk Golf",
+      "description": "Different playing fields similar to a golf course. The target hole is represented by a stick and a ring encircled by a chain into which should be attempted by the Frisbee with as few attemps as possible. Great fun for the whole family!",
+      "image": "assets/images/activities/disk_golf.jpeg",
+      "tags": ["sport"],
+      "speakers": [],
+      "type": "activity"
+    },
+    {
+      "time_start": "13:00", "time_end": "15:00",
+      "location": "Hotel Krvavec",
+      "title": "Lunch",
+      "description": "",
+      "image": "assets/images/food_and_drinks/lunch.jpg",
+      "tags": [],
+      "speakers": [],
+      "type": "food_and_drink"
+    }
+  ]
+}

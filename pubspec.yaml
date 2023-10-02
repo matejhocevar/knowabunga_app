@@ -24,3 +24,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/activities/
+    - assets/images/discussion_panels/
+    - assets/images/food_and_drink/
+    - assets/images/talks/
