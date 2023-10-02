@@ -1,46 +1,18 @@
-import 'dart:convert';
-
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:knowabunga_app/src/activity_feature/activity_details_view.dart';
+import 'package:knowabunga_app/src/activity_feature/activity_tabs_view.dart';
 
 import 'activity_feature/activity.dart';
-import 'activity_feature/activity_list_view.dart';
 import 'settings/settings_controller.dart';
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({
     super.key,
     required this.settingsController,
   });
 
   final SettingsController settingsController;
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  List<Activity> activities = [];
-
-  @override
-  void initState() {
-    super.initState();
-
-    rootBundle.loadString('assets/data/activities.json').then((String data) {
-      var jsonMap = json.decode(data);
-      activities = [];
-      jsonMap.entries.forEach((entry) {
-        (entry.value as List<dynamic>).forEach((dynamic json) {
-          json['day'] = entry.key;
-          activities.add(Activity.fromJson(json));
-        });
-      });
-
-      setState(() {});
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     );
 
     return ListenableBuilder(
-      listenable: widget.settingsController,
+      listenable: settingsController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           restorationScopeId: 'app',
@@ -72,7 +44,7 @@ class _MyAppState extends State<MyApp> {
             Locale('en', ''),
           ],
           onGenerateTitle: (_) => 'Knowabunga 2023',
-          themeMode: widget.settingsController.themeMode,
+          themeMode: settingsController.themeMode,
           theme: ThemeData(
             colorScheme: schemeLight,
             useMaterial3: true,
@@ -87,11 +59,17 @@ class _MyAppState extends State<MyApp> {
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
                   case ActivityDetailsView.routeName:
-                    return const ActivityDetailsView();
-                  case ActivityListView.routeName:
+                    {
+                      Activity activity = Activity.fromJson((routeSettings
+                          .arguments as Map<String, dynamic>)['activity']);
+                      return ActivityDetailsView(activity: activity);
+                    }
+
+                  case ActivityTabsView.routeName:
                   default:
-                    return ActivityListView(
-                        controller: widget.settingsController);
+                    return ActivityTabsView(
+                      controller: settingsController,
+                    );
                 }
               },
             );

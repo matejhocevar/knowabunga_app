@@ -5,10 +5,10 @@
       "location": "Hotel Krvavec",
       "title": "Breakfast",
       "description": "",
-      "image": "assets/images/food_and_drink/breakfast.jpg",
+      "image": "assets/images/food_and_drinks/breakfast.jpg",
       "tags": [],
       "speakers": [],
-      "type": "food_and_drink"
+      "type": "food_and_drinks"
     },
     {
       "time_start": "9:30", "time_end": "9:40",
@@ -64,7 +64,7 @@
       "image": "assets/images/food_and_drinks/lunch.jpg",
       "tags": [],
       "speakers": [],
-      "type": "food_and_drink"
+      "type": "food_and_drinks"
     },
     {
       "time_start": "13:00", "time_end": "13:30",
@@ -104,7 +104,7 @@
       "image": "assets/images/food_and_drinks/fika.jpg",
       "tags": [],
       "speakers": [],
-      "type": "food_and_drink"
+      "type": "food_and_drinks"
     },
     {
       "time_start": "15:30", "time_end": "16:20",
@@ -212,7 +212,7 @@
       "image": "assets/images/food_and_drinks/lunch.jpg",
       "tags": [],
       "speakers": [],
-      "type": "food_and_drink"
+      "type": "food_and_drinks"
     }
   ]
 }

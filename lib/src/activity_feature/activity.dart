@@ -3,7 +3,7 @@
 enum ActivityType {
   talk,
   discussion_panel,
-  food_and_drink,
+  food_and_drinks,
   sport,
   other,
 }
@@ -51,6 +51,21 @@ class Activity {
       speakers: List<String>.from(json['speakers']),
       type: Activity.parseActivityType(json['type']),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'day': day.name,
+      'time_start': timeStart,
+      'time_end': timeEnd,
+      'location': location,
+      'title': title,
+      'description': description,
+      'image': image,
+      'tags': tags,
+      'speakers': speakers,
+      'type': type.name,
+    };
   }
 
   static ActivityDay parseActivityDay(String day) {
