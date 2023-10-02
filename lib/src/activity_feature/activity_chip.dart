@@ -10,11 +10,14 @@ class ActivityChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Chip(
-      label: Text(text),
-      labelPadding: EdgeInsets.zero,
-      labelStyle: const TextStyle(fontSize: 12),
-      visualDensity: VisualDensity.compact,
+    return Padding(
+      padding: const EdgeInsets.only(right: 8, bottom: 8),
+      child: Chip(
+        label: Text(text),
+        labelPadding: EdgeInsets.zero,
+        labelStyle: const TextStyle(fontSize: 12),
+        visualDensity: VisualDensity.compact,
+      ),
     );
   }
 }

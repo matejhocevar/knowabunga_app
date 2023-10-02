@@ -1,11 +1,13 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:knowabunga_app/src/utils/string_extensions.dart';
+
 enum ActivityType {
   talk,
   discussion_panel,
   food_and_drinks,
   sport,
-  other,
+  general,
 }
 
 enum ActivityDay {
@@ -37,6 +39,10 @@ class Activity {
   final List<String> tags;
   final List<String> speakers;
   final ActivityType type;
+
+  String get tag => '${day.name} $timeStart $timeEnd $title';
+
+  String get friendlyType => type.name.replaceAll('_', ' ').capitalize();
 
   factory Activity.fromJson(Map<String, dynamic> json) {
     return Activity(

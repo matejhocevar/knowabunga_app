@@ -5,6 +5,7 @@ import 'package:knowabunga_app/src/utils/string_extensions.dart';
 import 'activity.dart';
 import 'activity_chip.dart';
 import 'activity_details_view.dart';
+import 'activity_thumbnail.dart';
 
 class ActivityTile extends StatelessWidget {
   const ActivityTile({super.key, required this.activity});
@@ -23,7 +24,10 @@ class ActivityTile extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
-            _ActivityThumbnail(image: activity.image),
+            ActivityThumbnail(
+              image: activity.image,
+              tag: activity.tag,
+            ),
             const SizedBox(width: 16),
             Expanded(
               child: Column(
@@ -48,7 +52,7 @@ class ActivityTile extends StatelessWidget {
                     text: activity.location,
                   ),
                   const SizedBox(height: 8),
-                  Row(
+                  Wrap(
                     children: <Widget>[
                       ...activity.tags
                           .map(
@@ -76,31 +80,6 @@ class ActivityTile extends StatelessWidget {
           arguments: {'activity': activity.toJson()},
         );
       },
-    );
-  }
-}
-
-class _ActivityThumbnail extends StatelessWidget {
-  const _ActivityThumbnail({
-    super.key,
-    required this.image,
-  });
-
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      height: 100,
-      clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-      ),
-      child: Image.asset(
-        image,
-        fit: BoxFit.cover,
-      ),
     );
   }
 }

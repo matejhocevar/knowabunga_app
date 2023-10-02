@@ -18,7 +18,7 @@
       "image": "assets/images/logo.png",
       "tags": [],
       "speakers": [],
-      "type": "other"
+      "type": "general"
     },
     {
       "time_start": "9:40", "time_end": "10:10",
@@ -49,7 +49,7 @@
     {
       "time_start": "11:10", "time_end": "12:00",
       "location": "Hotel Krvavec",
-      "title": "How can Development & Design Inspire Each Other to Reach Beyond the Ordinary Results?",
+      "title": "How can Development & Design Inspire Each general to Reach Beyond the Ordinary Results?",
       "description": "Join us as we take you on a journey into the world of better collaboration between designers and developers. Find out how this teamwork can lead to impressive results. Learn how design can push developers, and how developers can push design, all for better outcomes.",
       "image": "assets/images/talks/leon-van-bakel.jpeg",
       "tags": ["Design & Product"],
@@ -140,7 +140,7 @@
       "image": "assets/images/logo.png",
       "tags": [],
       "speakers": [],
-      "type": "other"
+      "type": "general"
     }
   ],
   "day2": [
@@ -158,7 +158,7 @@
       "time_start": "10:00", "time_end": "13:00",
       "location": "Krvavec",
       "title": "Mountain Go-Karting",
-      "description": "",
+      "description": "Krvavec offers you a fun descent along a paved track with attractive mountain go-karts. An activity that you will remember forever because of the abundance of fun and a good dose of adrenaline. Leave your worries in the valley and take the cable car to the Krvavec mountain and then a 4-seater to the top of the go-kart track, where the real adventure really begins!",
       "image": "assets/images/activities/go_karting.jpeg",
       "tags": ["sport"],
       "speakers": [],
