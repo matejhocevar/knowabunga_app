@@ -23,6 +23,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/data/
     - assets/images/
     - assets/images/activities/
     - assets/images/discussion_panels/

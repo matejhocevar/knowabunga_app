@@ -1,5 +1,5 @@
 {
-  "day_1": [
+  "day1": [
     {
       "time_start": "8:45", "time_end": "9:30",
       "location": "Hotel Krvavec",
@@ -143,7 +143,7 @@
       "type": "other"
     }
   ],
-  "day_2": [
+  "day2": [
     {
       "time_start": "10:00", "time_end": "13:00",
       "location": "Krvavec",
@@ -152,7 +152,7 @@
       "image": "assets/images/activities/go_karting.jpeg",
       "tags": ["sport"],
       "speakers": [],
-      "type": "activity"
+      "type": "sport"
     },
     {
       "time_start": "10:00", "time_end": "13:00",
@@ -162,7 +162,7 @@
       "image": "assets/images/activities/climbing.jpeg",
       "tags": ["sport"],
       "speakers": [],
-      "type": "activity"
+      "type": "sport"
     },
     {
       "time_start": "10:00", "time_end": "13:00",
@@ -172,7 +172,7 @@
       "image": "assets/images/activities/archery.jpeg",
       "tags": ["sport"],
       "speakers": [],
-      "type": "activity"
+      "type": "sport"
     },
     {
       "time_start": "10:00", "time_end": "13:00",
@@ -182,7 +182,7 @@
       "image": "assets/images/activities/tubing.jpeg",
       "tags": ["sport"],
       "speakers": [],
-      "type": "activity"
+      "type": "sport"
     },
     {
       "time_start": "10:00", "time_end": "13:00",
@@ -192,7 +192,7 @@
       "image": "assets/images/activities/slackline.jpeg",
       "tags": ["sport"],
       "speakers": [],
-      "type": "activity"
+      "type": "sport"
     },
     {
       "time_start": "10:00", "time_end": "13:00",
@@ -202,7 +202,7 @@
       "image": "assets/images/activities/disk_golf.jpeg",
       "tags": ["sport"],
       "speakers": [],
-      "type": "activity"
+      "type": "sport"
     },
     {
       "time_start": "13:00", "time_end": "15:00",

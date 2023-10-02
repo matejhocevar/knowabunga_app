@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:knowabunga_app/src/activity_feature/activity_details_view.dart';
 import 'package:knowabunga_app/src/settings/settings_controller.dart';
 
-import 'sample_item.dart';
-import 'sample_item_details_view.dart';
+import 'activity.dart';
 
-class SampleItemListView extends StatelessWidget {
-  const SampleItemListView({
+class ActivityListView extends StatelessWidget {
+  const ActivityListView({
     super.key,
-    this.items = const [SampleItem(1), SampleItem(2), SampleItem(3)],
+    this.items = const [],
     required this.controller,
   });
 
   static const routeName = '/';
 
-  final List<SampleItem> items;
+  final List<Activity> items;
   final SettingsController controller;
 
   @override
@@ -32,7 +32,8 @@ class SampleItemListView extends StatelessWidget {
           final item = items[index];
 
           return ListTile(
-            title: Text('SampleItem ${item.id}'),
+            key: ValueKey(item.title),
+            title: Text('SampleItem ${item.title}'),
             leading: Container(
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
@@ -43,7 +44,7 @@ class SampleItemListView extends StatelessWidget {
             onTap: () {
               Navigator.restorablePushNamed(
                 context,
-                SampleItemDetailsView.routeName,
+                ActivityDetailsView.routeName,
               );
             },
           );
