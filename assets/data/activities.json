@@ -145,6 +145,16 @@
   ],
   "day2": [
     {
+      "time_start": "8:45", "time_end": "10:00",
+      "location": "Hotel Krvavec",
+      "title": "Breakfast",
+      "description": "",
+      "image": "assets/images/food_and_drinks/breakfast.jpg",
+      "tags": [],
+      "speakers": [],
+      "type": "food_and_drinks"
+    },
+    {
       "time_start": "10:00", "time_end": "13:00",
       "location": "Krvavec",
       "title": "Mountain Go-Karting",

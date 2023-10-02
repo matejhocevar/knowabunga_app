@@ -93,7 +93,7 @@ class _ActivityThumbnail extends StatelessWidget {
     return Container(
       width: 100,
       height: 100,
-      clipBehavior: Clip.hardEdge,
+      clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
       ),
