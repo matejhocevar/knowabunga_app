@@ -1,8 +1,5 @@
 name: knowabunga_app
 description: Flutter showcase app for Knowabunga 2023 talk.
-authors:
-  - matejhocevar
-  - Leon van Bakel
 
 publish_to: 'none'
 
@@ -14,8 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -26,9 +21,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # Enable generation of localized Strings from arb files.
-  generate: true
-
   assets:
-    # Add assets from the images directory to the application.
     - assets/images/
