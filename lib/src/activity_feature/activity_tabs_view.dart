@@ -48,9 +48,19 @@ class _ActivityTabsViewState extends State<ActivityTabsView> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Sample Items'),
+          title: Container(
+            margin: const EdgeInsets.only(top: 16),
+            height: 200,
+            child: Image.asset(
+              'assets/images/logo.png',
+              fit: BoxFit.fitHeight,
+            ),
+          ),
           actions: [
-            _ThemeSwitcher(controller: widget.controller),
+            Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: _ThemeSwitcher(controller: widget.controller),
+            ),
           ],
           bottom: const TabBar(
             tabs: [

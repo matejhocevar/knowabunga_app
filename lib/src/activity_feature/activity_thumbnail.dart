@@ -22,12 +22,11 @@ class ActivityThumbnail extends StatelessWidget {
         width: size,
         height: size,
         clipBehavior: Clip.antiAlias,
-        decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-        ),
+        decoration: const BoxDecoration(shape: BoxShape.circle),
         child: Image.asset(
           image,
           fit: fit,
+          alignment: Alignment.center,
         ),
       ),
     );

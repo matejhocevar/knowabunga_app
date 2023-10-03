@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
@@ -20,17 +22,37 @@ class ActivityDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${activity.friendlyType} details'),
+        toolbarHeight: kToolbarHeight + 8,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: const EdgeInsets.only(top: 8),
+              height: 64,
+              child: Image.asset(
+                'assets/images/logo.png',
+                fit: BoxFit.fitHeight,
+              ),
+            ),
+            const SizedBox(width: 8),
+            Flexible(
+              child: Text(
+                'About the ${activity.friendlyType}',
+                overflow: TextOverflow.fade,
+              ),
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView(
           children: [
+            const SizedBox(height: 32),
             ActivityThumbnail(
               image: activity.image,
               tag: activity.tag,
-              size: 256,
-              fit: BoxFit.cover,
+              size: min(MediaQuery.sizeOf(context).width / 2, 400),
             ),
             const SizedBox(height: 8),
             if (activity.speakers.isNotEmpty) ...[
@@ -44,7 +66,7 @@ class ActivityDetailsView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 8),
             ],
             Text(
               activity.title,
@@ -54,7 +76,7 @@ class ActivityDetailsView extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

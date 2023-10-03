@@ -34,6 +34,14 @@ class MyApp extends StatelessWidget {
       tones: FlexTones.vivid(Brightness.dark),
     );
 
+    const AppBarTheme appBarTheme = AppBarTheme(
+      centerTitle: true,
+      toolbarHeight: kToolbarHeight + 128,
+      scrolledUnderElevation: 1,
+      elevation: 10,
+      shadowColor: secondarySeedColor,
+    );
+
     return ListenableBuilder(
       listenable: settingsController,
       builder: (BuildContext context, Widget? child) {
@@ -46,10 +54,12 @@ class MyApp extends StatelessWidget {
           onGenerateTitle: (_) => 'Knowabunga 2023',
           themeMode: settingsController.themeMode,
           theme: ThemeData(
+            appBarTheme: appBarTheme,
             colorScheme: schemeLight,
             useMaterial3: true,
           ),
           darkTheme: ThemeData(
+            appBarTheme: appBarTheme,
             colorScheme: schemeDark,
             useMaterial3: true,
           ),
