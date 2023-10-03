@@ -1,12 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:knowabunga_app/src/activity_feature/activity_feature.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
 import '../../shared/widgets/icon_text.dart';
-import '../models/activity.dart';
-import '../widgets/activity_chip.dart';
-import '../widgets/activity_thumbnail.dart';
 
 class ActivityDetailsView extends StatelessWidget {
   const ActivityDetailsView({
@@ -20,7 +18,7 @@ class ActivityDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    late Widget body;
+    Widget? body;
 
     if (activity == null) {
       body = Container();
