@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="knowabunga_app"
+        android:label="Knowabunga 2023"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

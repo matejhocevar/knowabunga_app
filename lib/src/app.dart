@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
           supportedLocales: const [
             Locale('en', ''),
           ],
-          onGenerateTitle: (_) => 'Knowabunga 2023',
+          title: 'Knowabunga 2023',
           themeMode: settingsController.themeMode,
           theme: ThemeData(
             appBarTheme: appBarTheme,
