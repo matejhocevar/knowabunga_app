@@ -1,9 +1,7 @@
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:knowabunga_app/src/activity_feature/activity_details_view.dart';
-import 'package:knowabunga_app/src/activity_feature/activity_tabs_view.dart';
 
-import 'activity_feature/activity.dart';
+import 'activity_feature/activity_feature.dart';
 import 'settings/settings_controller.dart';
 
 class MyApp extends StatelessWidget {

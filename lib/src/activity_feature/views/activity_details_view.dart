@@ -3,10 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
-import '../shared/widgets/icon_text.dart';
-import 'activity.dart';
-import 'activity_chip.dart';
-import 'activity_thumbnail.dart';
+import '../../shared/widgets/icon_text.dart';
+import '../models/activity.dart';
+import '../widgets/activity_chip.dart';
+import '../widgets/activity_thumbnail.dart';
 
 class ActivityDetailsView extends StatelessWidget {
   const ActivityDetailsView({

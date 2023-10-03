@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'activity.dart';
+import '../models/activity.dart';
 import 'activity_tile.dart';
 
-class ActivityListView extends StatelessWidget {
-  const ActivityListView({
+class ActivityList extends StatelessWidget {
+  const ActivityList({
     super.key,
     this.items = const [],
   });

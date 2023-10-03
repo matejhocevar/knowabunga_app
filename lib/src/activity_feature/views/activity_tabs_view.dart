@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:knowabunga_app/src/activity_feature/activity_list_view.dart';
-import 'package:knowabunga_app/src/settings/settings_controller.dart';
 
-import 'activity.dart';
+import '../../settings/settings_controller.dart';
+import '../models/activity.dart';
+import '../widgets/activity_list.dart';
 
 class ActivityTabsView extends StatefulWidget {
   const ActivityTabsView({
@@ -71,11 +71,11 @@ class _ActivityTabsViewState extends State<ActivityTabsView> {
         ),
         body: TabBarView(
           children: [
-            ActivityListView(
+            ActivityList(
               items:
                   activities.where((a) => a.day == ActivityDay.day1).toList(),
             ),
-            ActivityListView(
+            ActivityList(
               items:
                   activities.where((a) => a.day == ActivityDay.day2).toList(),
             ),

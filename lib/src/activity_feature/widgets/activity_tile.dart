@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:knowabunga_app/src/shared/widgets/icon_text.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
-import 'activity.dart';
+import '../models/activity.dart';
+import '../views/activity_details_view.dart';
 import 'activity_chip.dart';
-import 'activity_details_view.dart';
 import 'activity_thumbnail.dart';
 
 class ActivityTile extends StatelessWidget {
