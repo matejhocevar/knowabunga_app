@@ -47,12 +47,19 @@ class ActivityDetailsView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView(
+          shrinkWrap: true,
           children: [
             const SizedBox(height: 32),
-            ActivityThumbnail(
-              image: activity.image,
-              tag: activity.tag,
-              size: min(MediaQuery.sizeOf(context).width / 2, 400),
+            Align(
+              alignment: Alignment.topCenter,
+              child: SizedBox(
+                width: min(MediaQuery.sizeOf(context).width / 2, 400),
+                child: ActivityThumbnail(
+                  image: activity.image,
+                  tag: activity.tag,
+                  size: min(MediaQuery.sizeOf(context).width / 2, 400),
+                ),
+              ),
             ),
             const SizedBox(height: 8),
             if (activity.speakers.isNotEmpty) ...[
