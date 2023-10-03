@@ -20,6 +20,8 @@ class ActivityDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.sizeOf(context).width;
+
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: kToolbarHeight + 8,
@@ -45,7 +47,7 @@ class ActivityDetailsView extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(screenWidth / 10),
         child: ListView(
           shrinkWrap: true,
           children: [
@@ -53,11 +55,11 @@ class ActivityDetailsView extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: SizedBox(
-                width: min(MediaQuery.sizeOf(context).width / 2, 400),
+                width: min(screenWidth / 2, 400),
                 child: ActivityThumbnail(
                   image: activity.image,
                   tag: activity.tag,
-                  size: min(MediaQuery.sizeOf(context).width / 2, 400),
+                  size: min(screenWidth / 2, 400),
                 ),
               ),
             ),
