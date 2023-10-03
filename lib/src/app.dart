@@ -68,8 +68,13 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case ActivityDetailsView.routeName:
                     {
-                      Activity activity = Activity.fromJson((routeSettings
+                      Activity? activity = Activity.fromJson((routeSettings
                           .arguments as Map<String, dynamic>)['activity']);
+
+                      if (activity.title == 'Slackline') {
+                        activity = null;
+                      }
+
                       return ActivityDetailsView(activity: activity);
                     }
 

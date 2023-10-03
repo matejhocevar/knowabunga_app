@@ -16,11 +16,17 @@ class ActivityDetailsView extends StatelessWidget {
 
   static const routeName = '/activity';
 
-  final Activity activity;
+  final Activity? activity;
 
   @override
   Widget build(BuildContext context) {
-    final double screenWidth = MediaQuery.sizeOf(context).width;
+    late Widget body;
+
+    if (activity == null) {
+      body = Container();
+    } else {
+      body = _ActivityDetails(activity: activity!);
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -39,90 +45,103 @@ class ActivityDetailsView extends StatelessWidget {
             const SizedBox(width: 8),
             Flexible(
               child: Text(
-                'About the ${activity.friendlyType}',
+                'About the ${activity?.friendlyType ?? "Unknown"}',
                 overflow: TextOverflow.fade,
               ),
             ),
           ],
         ),
       ),
-      body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: screenWidth / 10),
-        shrinkWrap: true,
-        children: [
-          const SizedBox(height: 32),
-          Align(
-            alignment: Alignment.topCenter,
-            child: SizedBox(
-              width: min(screenWidth / 2, 400),
-              child: ActivityThumbnail(
-                image: activity.image,
-                tag: activity.tag,
-                size: min(screenWidth / 2, 400),
+      body: body,
+    );
+  }
+}
+
+class _ActivityDetails extends StatelessWidget {
+  const _ActivityDetails({required this.activity});
+
+  final Activity activity;
+
+  @override
+  Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.sizeOf(context).width;
+
+    return ListView(
+      padding: EdgeInsets.symmetric(horizontal: screenWidth / 10),
+      shrinkWrap: true,
+      children: [
+        const SizedBox(height: 32),
+        Align(
+          alignment: Alignment.topCenter,
+          child: SizedBox(
+            width: min(screenWidth / 2, 400),
+            child: ActivityThumbnail(
+              image: activity.image,
+              tag: activity.tag,
+              size: min(screenWidth / 2, 400),
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
+        if (activity.speakers.isNotEmpty) ...[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 124),
+            child: Text(
+              activity.speakers.smartJoin(),
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 18,
               ),
             ),
           ),
           const SizedBox(height: 8),
-          if (activity.speakers.isNotEmpty) ...[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 124),
-              child: Text(
-                activity.speakers.smartJoin(),
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            const SizedBox(height: 8),
-          ],
-          Text(
-            activity.title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              IconText(
-                icon: const Icon(Icons.access_time, size: 16),
-                text: '${activity.timeStart} - ${activity.timeEnd}',
-              ),
-              const SizedBox(width: 8),
-              IconText(
-                icon: const Icon(Icons.location_on_outlined, size: 16),
-                text: activity.location,
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Wrap(
-            alignment: WrapAlignment.center,
-            spacing: 8,
-            children: <Widget>[
-              ...activity.tags
-                  .map(
-                    (t) => ActivityChip(
-                      text: t.split('.').last.replaceAll('_', ' ').capitalize(),
-                    ),
-                  )
-                  .toList(),
-            ],
-          ),
-          const SizedBox(height: 16),
-          Text(
-            activity.description,
-            style: const TextStyle(
-              fontSize: 14,
-            ),
-          ),
-          const SizedBox(height: 64),
         ],
-      ),
+        Text(
+          activity.title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconText(
+              icon: const Icon(Icons.access_time, size: 16),
+              text: '${activity.timeStart} - ${activity.timeEnd}',
+            ),
+            const SizedBox(width: 8),
+            IconText(
+              icon: const Icon(Icons.location_on_outlined, size: 16),
+              text: activity.location,
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 8,
+          children: <Widget>[
+            ...activity.tags
+                .map(
+                  (t) => ActivityChip(
+                    text: t.split('.').last.replaceAll('_', ' ').capitalize(),
+                  ),
+                )
+                .toList(),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Text(
+          activity.description,
+          style: const TextStyle(
+            fontSize: 14,
+          ),
+        ),
+        const SizedBox(height: 64),
+      ],
     );
   }
 }
