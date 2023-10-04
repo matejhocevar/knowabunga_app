@@ -1,7 +1,9 @@
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'activity_feature/activity_feature.dart';
+import 'constants/constants.dart';
 import 'settings/settings_controller.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,21 +16,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color primarySeedColor = Color(0xFF3DB870);
-    const Color secondarySeedColor = Color(0xFF000004);
-    const Color tertiarySeedColor = Color(0xFF21418C);
     final ColorScheme schemeLight = SeedColorScheme.fromSeeds(
       brightness: Brightness.light,
-      primaryKey: primarySeedColor,
-      secondaryKey: secondarySeedColor,
-      tertiaryKey: tertiarySeedColor,
+      primaryKey: AppColors.primarySeedColor,
+      secondaryKey: AppColors.secondarySeedColor,
+      tertiaryKey: AppColors.tertiarySeedColor,
       tones: FlexTones.vivid(Brightness.light),
     );
     final ColorScheme schemeDark = SeedColorScheme.fromSeeds(
       brightness: Brightness.dark,
-      primaryKey: primarySeedColor,
-      secondaryKey: secondarySeedColor,
-      tertiaryKey: tertiarySeedColor,
+      primaryKey: AppColors.primarySeedColor,
+      secondaryKey: AppColors.secondarySeedColor,
+      tertiaryKey: AppColors.tertiarySeedColor,
       tones: FlexTones.vivid(Brightness.dark),
     );
 
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
       toolbarHeight: kToolbarHeight + 128,
       scrolledUnderElevation: 1,
       elevation: 10,
-      shadowColor: secondarySeedColor,
+      shadowColor: AppColors.secondarySeedColor,
     );
 
     return ListenableBuilder(
@@ -55,11 +54,13 @@ class MyApp extends StatelessWidget {
             appBarTheme: appBarTheme,
             colorScheme: schemeLight,
             useMaterial3: true,
+            fontFamily: GoogleFonts.sora().fontFamily,
           ),
           darkTheme: ThemeData(
             appBarTheme: appBarTheme,
             colorScheme: schemeDark,
             useMaterial3: true,
+            fontFamily: GoogleFonts.sora().fontFamily,
           ),
           onGenerateRoute: (RouteSettings routeSettings) {
             switch (routeSettings.name) {
@@ -91,6 +92,8 @@ class MyApp extends StatelessWidget {
                   },
                 );
             }
+
+            return null;
           },
           onUnknownRoute: (RouteSettings routeSettings) {
             return MaterialPageRoute<void>(

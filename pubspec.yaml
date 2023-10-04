@@ -12,6 +12,7 @@ dependencies:
   flex_seed_scheme: ^1.4.0
   flutter:
     sdk: flutter
+  google_fonts: ^6.1.0
   url_strategy: ^0.2.0
 
 dev_dependencies:

@@ -22,7 +22,7 @@ class ActivityDetailsView extends StatelessWidget {
     Widget? body;
 
     if (activity == null) {
-      body = ActivityEmptyStateBasic();
+      body = Container();
     } else {
       body = _ActivityDetails(activity: activity!);
     }
