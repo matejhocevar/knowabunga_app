@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:knowabunga_app/src/activity_feature/activity_feature.dart';
+import 'package:knowabunga_app/src/settings/settings_controller.dart';
 import 'package:knowabunga_app/src/shared/widgets/app_background.dart';
+import 'package:knowabunga_app/src/shared/widgets/theme_switcher.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
 import '../../shared/widgets/icon_text.dart';
@@ -11,11 +13,13 @@ class ActivityDetailsView extends StatelessWidget {
   const ActivityDetailsView({
     super.key,
     required this.activity,
+    required this.controller,
   });
 
   static const routeName = '/activity';
 
   final Activity? activity;
+  final SettingsController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -33,23 +37,20 @@ class ActivityDetailsView extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              margin: const EdgeInsets.only(top: 8),
-              height: 64,
-              child: Image.asset(
-                'assets/images/logo.png',
-                fit: BoxFit.fitHeight,
-              ),
-            ),
-            const SizedBox(width: 8),
             Flexible(
               child: Text(
-                'About the ${activity?.friendlyType ?? "Unknown"}',
+                activity?.title ?? 'Nothing here',
                 overflow: TextOverflow.fade,
               ),
             ),
           ],
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ThemeSwitcher(controller: controller),
+          ),
+        ],
       ),
       body: AppBackground(
         child: body,

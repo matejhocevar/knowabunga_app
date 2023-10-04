@@ -76,7 +76,10 @@ class MyApp extends StatelessWidget {
                   return MaterialPageRoute<void>(
                     settings: routeSettings,
                     builder: (BuildContext context) {
-                      return ActivityDetailsView(activity: activity);
+                      return ActivityDetailsView(
+                        activity: activity,
+                        controller: settingsController,
+                      );
                     },
                   );
                 }
@@ -99,7 +102,10 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute<void>(
               settings: routeSettings,
               builder: (BuildContext context) {
-                return const ActivityDetailsView(activity: null);
+                return ActivityDetailsView(
+                  activity: null,
+                  controller: settingsController,
+                );
               },
             );
           },
