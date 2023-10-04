@@ -21,6 +21,7 @@ class ActivityHeaderTabs implements SliverPersistentHeaderDelegate {
         indicatorSize: TabBarIndicatorSize.tab,
         indicatorWeight: 4,
         unselectedLabelColor: colors.primary,
+        labelStyle: const TextStyle(fontSize: 18),
         tabs: const [
           Tab(text: 'Friday'),
           Tab(text: 'Saturday'),

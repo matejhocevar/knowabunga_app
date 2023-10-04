@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:knowabunga_app/src/shared/widgets/icon_text.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
+import '../../constants/constants.dart';
 import '../models/activity.dart';
 import '../views/activity_details_view.dart';
 import 'activity_chip.dart';
@@ -35,23 +36,36 @@ class ActivityTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   IconText(
-                    icon: const Icon(Icons.access_time, size: 16),
-                    text: '${activity.timeStart} - ${activity.timeEnd}',
+                    icon: const Icon(
+                      Icons.access_time,
+                      size: 16,
+                      color: AppColors.gray,
+                    ),
+                    text: Text(
+                      '${activity.timeStart} - ${activity.timeEnd}',
+                      style: const TextStyle(color: AppColors.gray),
+                    ),
                   ),
                   Text(
                     activity.title,
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                     overflow: TextOverflow.fade,
                   ),
-                  const SizedBox(height: 8),
                   IconText(
-                    icon: const Icon(Icons.location_on_outlined, size: 16),
-                    text: activity.location,
+                    icon: const Icon(
+                      Icons.location_on_outlined,
+                      size: 16,
+                      color: AppColors.gray,
+                    ),
+                    text: Text(
+                      activity.location,
+                      style: const TextStyle(color: AppColors.gray),
+                    ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 4),
                   Wrap(
                     children: <Widget>[
                       ...activity.tags

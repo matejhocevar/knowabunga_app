@@ -7,6 +7,7 @@ import 'package:knowabunga_app/src/shared/widgets/app_background.dart';
 import 'package:knowabunga_app/src/shared/widgets/theme_switcher.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
+import '../../constants/constants.dart';
 import '../../shared/widgets/icon_text.dart';
 
 class ActivityDetailsView extends StatelessWidget {
@@ -111,12 +112,18 @@ class _ActivityDetails extends StatelessWidget {
           children: <Widget>[
             IconText(
               icon: const Icon(Icons.access_time, size: 16),
-              text: '${activity.timeStart} - ${activity.timeEnd}',
+              text: Text(
+                '${activity.timeStart} - ${activity.timeEnd}',
+                style: const TextStyle(color: AppColors.gray),
+              ),
             ),
             const SizedBox(width: 8),
             IconText(
               icon: const Icon(Icons.location_on_outlined, size: 16),
-              text: activity.location,
+              text: Text(
+                activity.location,
+                style: const TextStyle(color: AppColors.gray),
+              ),
             ),
           ],
         ),

@@ -8,7 +8,7 @@ class IconText extends StatelessWidget {
   });
 
   final Icon icon;
-  final String text;
+  final Text text;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class IconText extends StatelessWidget {
       children: [
         icon,
         const SizedBox(width: 4),
-        Text(text),
+        text,
       ],
     );
   }
