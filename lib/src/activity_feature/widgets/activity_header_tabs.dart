@@ -13,14 +13,13 @@ class ActivityHeaderTabs implements SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    ColorScheme colors = Theme.of(context).colorScheme;
-
     return Container(
-      color: Theme.of(context).secondaryHeaderColor,
+      color: AppBarTheme.of(context).backgroundColor,
       child: TabBar(
         indicatorSize: TabBarIndicatorSize.tab,
         indicatorWeight: 4,
-        unselectedLabelColor: colors.primary,
+        labelColor: AppBarTheme.of(context).foregroundColor,
+        unselectedLabelColor: AppBarTheme.of(context).foregroundColor,
         labelStyle: const TextStyle(fontSize: 18),
         tabs: const [
           Tab(text: 'Friday'),

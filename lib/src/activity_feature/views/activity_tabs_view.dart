@@ -48,7 +48,7 @@ class _ActivityTabsViewState extends State<ActivityTabsView> {
       body: DefaultTabController(
         length: 2,
         child: NestedScrollView(
-          headerSliverBuilder: (context, value) {
+          headerSliverBuilder: (context, _) {
             return [
               SliverPersistentHeader(
                 pinned: true,

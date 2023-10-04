@@ -37,6 +37,8 @@ class MyApp extends StatelessWidget {
       scrolledUnderElevation: 1,
       elevation: 10,
       shadowColor: AppColors.secondarySeedColor,
+      foregroundColor: AppColors.tertiarySeedColor,
+      backgroundColor: AppColors.primarySeedColor,
     );
 
     return ListenableBuilder(
@@ -51,13 +53,19 @@ class MyApp extends StatelessWidget {
           title: 'Knowabunga 2023',
           themeMode: settingsController.themeMode,
           theme: ThemeData(
-            appBarTheme: appBarTheme,
+            appBarTheme: appBarTheme.copyWith(
+              foregroundColor: AppColors.tertiarySeedColor,
+              backgroundColor: AppColors.primarySeedColor,
+            ),
             colorScheme: schemeLight,
             useMaterial3: true,
             fontFamily: GoogleFonts.sora().fontFamily,
           ),
           darkTheme: ThemeData(
-            appBarTheme: appBarTheme,
+            appBarTheme: appBarTheme.copyWith(
+              foregroundColor: AppColors.primarySeedColor,
+              backgroundColor: AppColors.tertiarySeedColor,
+            ),
             colorScheme: schemeDark,
             useMaterial3: true,
             fontFamily: GoogleFonts.sora().fontFamily,
@@ -67,7 +75,7 @@ class MyApp extends StatelessWidget {
               case ActivityDetailsView.routeName:
                 {
                   Activity? activity = Activity.fromJson((routeSettings
-                      .arguments as Map<String, dynamic>)['activity']);
+                      .arguments as Map<String, dynamic>?)?['activity']);
 
                   if (activity.title == 'Slackline') {
                     activity = null;

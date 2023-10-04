@@ -22,6 +22,7 @@ class _ThemeSwitcherState extends State<ThemeSwitcher> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      color: AppBarTheme.of(context).foregroundColor,
       icon: isLightMode()
           ? const Icon(Icons.dark_mode_outlined)
           : const Icon(Icons.light_mode_outlined),

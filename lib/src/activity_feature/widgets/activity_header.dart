@@ -23,7 +23,7 @@ class ActivityHeader implements SliverPersistentHeaderDelegate {
     double progress = shrinkOffset / maxExtent;
 
     return Container(
-      color: Theme.of(context).secondaryHeaderColor,
+      color: AppBarTheme.of(context).backgroundColor,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -40,9 +40,16 @@ class ActivityHeader implements SliverPersistentHeaderDelegate {
             left: 0,
             child: Opacity(
               opacity: progress,
-              child: const Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text('KB 2023', style: TextStyle(fontSize: 26)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  'KB 2023',
+                  style: TextStyle(
+                    fontSize: 26,
+                    color: AppBarTheme.of(context).foregroundColor,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
               ),
             ),
           ),
