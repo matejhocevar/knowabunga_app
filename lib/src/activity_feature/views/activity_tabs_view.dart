@@ -69,17 +69,27 @@ class _ActivityTabsViewState extends State<ActivityTabsView> {
             ],
           ),
         ),
-        body: TabBarView(
-          children: [
-            ActivityList(
-              items:
-                  activities.where((a) => a.day == ActivityDay.day1).toList(),
+        body: DecoratedBox(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                'assets/images/bg.png',
+              ),
+              repeat: ImageRepeat.repeat,
             ),
-            ActivityList(
-              items:
-                  activities.where((a) => a.day == ActivityDay.day2).toList(),
-            ),
-          ],
+          ),
+          child: TabBarView(
+            children: [
+              ActivityList(
+                items:
+                    activities.where((a) => a.day == ActivityDay.day1).toList(),
+              ),
+              ActivityList(
+                items:
+                    activities.where((a) => a.day == ActivityDay.day2).toList(),
+              ),
+            ],
+          ),
         ),
       ),
     );

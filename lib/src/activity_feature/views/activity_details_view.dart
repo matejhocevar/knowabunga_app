@@ -21,7 +21,7 @@ class ActivityDetailsView extends StatelessWidget {
     Widget? body;
 
     if (activity == null) {
-      body = Container();
+      body = ActivityEmptyStateBasic();
     } else {
       body = _ActivityDetails(activity: activity!);
     }
@@ -50,7 +50,18 @@ class ActivityDetailsView extends StatelessWidget {
           ],
         ),
       ),
-      body: body,
+      body: DecoratedBox(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/images/bg.png',
+            ),
+            alignment: Alignment.topLeft,
+            repeat: ImageRepeat.repeat,
+          ),
+        ),
+        child: body,
+      ),
     );
   }
 }
@@ -66,7 +77,6 @@ class _ActivityDetails extends StatelessWidget {
 
     return ListView(
       padding: EdgeInsets.symmetric(horizontal: screenWidth / 10),
-      shrinkWrap: true,
       children: [
         const SizedBox(height: 32),
         Align(
