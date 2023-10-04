@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:knowabunga_app/src/activity_feature/activity_feature.dart';
+import 'package:knowabunga_app/src/shared/widgets/app_background.dart';
 import 'package:knowabunga_app/src/utils/string_extensions.dart';
 
 import '../../shared/widgets/icon_text.dart';
@@ -50,16 +51,7 @@ class ActivityDetailsView extends StatelessWidget {
           ],
         ),
       ),
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              'assets/images/bg.png',
-            ),
-            alignment: Alignment.topLeft,
-            repeat: ImageRepeat.repeat,
-          ),
-        ),
+      body: AppBackground(
         child: body,
       ),
     );

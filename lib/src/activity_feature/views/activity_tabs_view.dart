@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:knowabunga_app/src/shared/widgets/app_background.dart';
 
 import '../../settings/settings_controller.dart';
 import '../models/activity.dart';
@@ -69,15 +70,7 @@ class _ActivityTabsViewState extends State<ActivityTabsView> {
             ],
           ),
         ),
-        body: DecoratedBox(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                'assets/images/bg.png',
-              ),
-              repeat: ImageRepeat.repeat,
-            ),
-          ),
+        body: AppBackground(
           child: TabBarView(
             children: [
               ActivityList(
