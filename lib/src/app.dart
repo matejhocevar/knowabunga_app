@@ -62,28 +62,41 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           onGenerateRoute: (RouteSettings routeSettings) {
-            return MaterialPageRoute<void>(
-              settings: routeSettings,
-              builder: (BuildContext context) {
-                switch (routeSettings.name) {
-                  case ActivityDetailsView.routeName:
-                    {
-                      Activity? activity = Activity.fromJson((routeSettings
-                          .arguments as Map<String, dynamic>)['activity']);
+            switch (routeSettings.name) {
+              case ActivityDetailsView.routeName:
+                {
+                  Activity? activity = Activity.fromJson((routeSettings
+                      .arguments as Map<String, dynamic>)['activity']);
 
-                      if (activity.title == 'Slackline') {
-                        activity = null;
-                      }
+                  if (activity.title == 'Slackline') {
+                    activity = null;
+                  }
 
+                  return MaterialPageRoute<void>(
+                    settings: routeSettings,
+                    builder: (BuildContext context) {
                       return ActivityDetailsView(activity: activity);
-                    }
+                    },
+                  );
+                }
 
-                  case ActivityTabsView.routeName:
-                  default:
+              case ActivityTabsView.routeName:
+              case '' || '/':
+                return MaterialPageRoute<void>(
+                  settings: routeSettings,
+                  builder: (BuildContext context) {
                     return ActivityTabsView(
                       controller: settingsController,
                     );
-                }
+                  },
+                );
+            }
+          },
+          onUnknownRoute: (RouteSettings routeSettings) {
+            return MaterialPageRoute<void>(
+              settings: routeSettings,
+              builder: (BuildContext context) {
+                return const ActivityDetailsView(activity: null);
               },
             );
           },
