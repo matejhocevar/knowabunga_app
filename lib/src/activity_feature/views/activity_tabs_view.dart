@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:knowabunga_app/src/shared/widgets/app_background.dart';
 
 import '../../settings/settings_controller.dart';
 import '../activity_feature.dart';
@@ -61,17 +62,21 @@ class _ActivityTabsViewState extends State<ActivityTabsView> {
               ),
             ];
           },
-          body: TabBarView(
-            children: [
-              ActivityList(
-                items:
-                    activities.where((a) => a.day == ActivityDay.day1).toList(),
-              ),
-              ActivityList(
-                items:
-                    activities.where((a) => a.day == ActivityDay.day2).toList(),
-              ),
-            ],
+          body: AppBackground(
+            child: TabBarView(
+              children: [
+                ActivityList(
+                  items: activities
+                      .where((a) => a.day == ActivityDay.day1)
+                      .toList(),
+                ),
+                ActivityList(
+                  items: activities
+                      .where((a) => a.day == ActivityDay.day2)
+                      .toList(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
