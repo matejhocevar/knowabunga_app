@@ -72,7 +72,7 @@ class _ActivityDetails extends StatelessWidget {
     return ListView(
       padding: EdgeInsets.symmetric(horizontal: screenWidth / 10),
       children: [
-        const SizedBox(height: 32),
+        const SizedBox(height: 48),
         Align(
           alignment: Alignment.topCenter,
           child: SizedBox(
@@ -84,42 +84,44 @@ class _ActivityDetails extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 48),
         if (activity.speakers.isNotEmpty) ...[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 124),
-            child: Text(
-              activity.speakers.smartJoin(),
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 18,
-              ),
+          Text(
+            activity.speakers.smartJoin(),
+            style: const TextStyle(
+              fontSize: 18,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 12),
         ],
         Text(
           activity.title,
-          textAlign: TextAlign.center,
           style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 12),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             IconText(
-              icon: const Icon(Icons.access_time, size: 16),
+              icon: const Icon(
+                Icons.access_time,
+                size: 22,
+                color: AppColors.gray,
+              ),
               text: Text(
                 '${activity.timeStart} - ${activity.timeEnd}',
                 style: const TextStyle(color: AppColors.gray),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: 12),
             IconText(
-              icon: const Icon(Icons.location_on_outlined, size: 16),
+              icon: const Icon(
+                Icons.location_on_outlined,
+                size: 22,
+                color: AppColors.gray,
+              ),
               text: Text(
                 activity.location,
                 style: const TextStyle(color: AppColors.gray),
@@ -127,9 +129,8 @@ class _ActivityDetails extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 12),
         Wrap(
-          alignment: WrapAlignment.center,
           spacing: 8,
           children: <Widget>[
             ...activity.tags
@@ -141,12 +142,10 @@ class _ActivityDetails extends StatelessWidget {
                 .toList(),
           ],
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 24),
         Text(
           activity.description,
-          style: const TextStyle(
-            fontSize: 14,
-          ),
+          style: const TextStyle(fontSize: 18),
         ),
         const SizedBox(height: 64),
       ],

@@ -24,6 +24,7 @@ class ActivityTile extends StatelessWidget {
         ),
         child: Row(
           mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ActivityThumbnail(
               image: activity.image,
@@ -38,7 +39,7 @@ class ActivityTile extends StatelessWidget {
                   IconText(
                     icon: const Icon(
                       Icons.access_time,
-                      size: 16,
+                      size: 22,
                       color: AppColors.gray,
                     ),
                     text: Text(
@@ -54,10 +55,11 @@ class ActivityTile extends StatelessWidget {
                     ),
                     overflow: TextOverflow.fade,
                   ),
+                  const SizedBox(height: 4),
                   IconText(
                     icon: const Icon(
                       Icons.location_on_outlined,
-                      size: 16,
+                      size: 22,
                       color: AppColors.gray,
                     ),
                     text: Text(
@@ -65,7 +67,7 @@ class ActivityTile extends StatelessWidget {
                       style: const TextStyle(color: AppColors.gray),
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 8),
                   Wrap(
                     children: <Widget>[
                       ...activity.tags

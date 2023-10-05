@@ -15,11 +15,12 @@ class ActivityChip extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 8, bottom: 8),
       child: Chip(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         side: const BorderSide(color: AppColors.gray, width: 1),
         label: Text(text),
         labelPadding: EdgeInsets.zero,
         labelStyle: const TextStyle(
-          fontSize: 16,
+          fontSize: 14,
           color: AppColors.gray,
         ),
         backgroundColor: Colors.transparent,
