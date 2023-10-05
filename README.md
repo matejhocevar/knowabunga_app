@@ -19,10 +19,10 @@
 
 ## Screenshots
 
-<p align="center">
+<p>
     <img src="/media/tablet.png?raw=true" width="250px" alt="Knowabunga 2023 tablet app" />
     <img src="/media/desktop.png?raw=true" width="250px" alt="Knowabunga 2023 desktop app" />
-    <img src="/media/tablet.png?raw=true" width="250px" alt="Knowabunga 2023 mobile app" />
+    <img src="/media/mobile.png?raw=true" width="250px" alt="Knowabunga 2023 mobile app" />
 </p>
 
 ## Live
