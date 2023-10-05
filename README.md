@@ -1,30 +1,75 @@
-# Knowabunga 2023 app
+<p align="center">
+    <br /><br />
+    <img src="/assets/images/logo.png?raw=true" width="450px" alt="Knowabunga 2023 app" />
+    <br /><br />
+</p>
 
-Flutter showcase app for Knowabunga 2023 talk.
+<h1 align="center">Knowabunga 2023 app</h1>
+
+> Unofficial app for the Knowabunga 2023 event
+
+## Features
+
+- 🪶 Lightweight
+- 📱 Responsive
+- 🎨 Light / Dark mode
+- 🚅 Custom animations
+- 🦄 Rive animations
+- 🛟 Support for mobile, web and desktop
+
+## Screenshots
+
+<p align="center">
+    <img src="/media/tablet.png?raw=true" width="250px" alt="Knowabunga 2023 tablet app" />
+    <img src="/media/desktop.png?raw=true" width="250px" alt="Knowabunga 2023 desktop app" />
+    <img src="/media/tablet.png?raw=true" width="250px" alt="Knowabunga 2023 mobile app" />
+</p>
+
+## Live
+
+App web version is available at
+
+- [Live demo](https://kb23.1337co.de/)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
+To setup Knowabunga 2023 app project you need to clone this project and run the following commands from the root of the repository:
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+```
 
-## Assets
+## Running locally
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
+To run the app locally, use the Android Studio or VS Code or run the following command:
 
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
+```bash
+flutter run <platform>
+```
 
-## Localization
+## Build
 
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
+Build it for a specific platform:
 
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+```bash
+flutter build <platform> --release
+```
+
+## Deployment
+
+At the moment, only the web app deployment is available. The mobile apps are coming soon.
+
+### Web
+
+We are using Firebase for hosting the web app. To deploy the web app, run the following command:
+
+```bash
+firebase deploy
+```
+
+## Authors
+
+- Design & prototyping: Leon van Bakel
+- Development: [Matej Hočevar](https://github.com/matejhocevar)
+
+
