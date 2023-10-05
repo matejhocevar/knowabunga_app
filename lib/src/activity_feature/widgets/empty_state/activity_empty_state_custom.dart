@@ -16,7 +16,7 @@ class ActivityEmptyStateCustom extends StatelessWidget {
     return Container(
       height: screenSize.height,
       width: double.infinity,
-      padding: EdgeInsets.all(screenSize.width / 8),
+      padding: const EdgeInsets.all(64),
       child: const SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
