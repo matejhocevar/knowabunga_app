@@ -20,13 +20,13 @@
 ## Screenshots
 
 <h2 align="center">Tablet version in dark mode</h2>
-<img src="/media/tablet.png?raw=true" width="250px" alt="Knowabunga 2023 tablet app" />
+<img src="/media/tablet.png?raw=true" width="80%" alt="Knowabunga 2023 tablet app" />
 
 <h2 align="center">Mobile version in light mode</h2>
-<img src="/media/mobile.png?raw=true" width="250px" alt="Knowabunga 2023 mobile app" />
+<img src="/media/mobile.png?raw=true" width="300px" alt="Knowabunga 2023 mobile app" />
 
 <h2 align="center">Desktop version of Activity details in light mode</h2>
-<img src="/media/desktop.png?raw=true" width="250px" alt="Knowabunga 2023 desktop app" />
+<img src="/media/desktop.png?raw=true" width="100%" alt="Knowabunga 2023 desktop app" />
 
 ## Live
 
