@@ -6,8 +6,8 @@ import '../../../constants/constants.dart';
 import '../../../shared/widgets/shapes/circle.dart';
 import '../../../shared/widgets/shapes/semicircle.dart';
 
-class ActivityEmptyStateCustomAnimation extends StatelessWidget {
-  const ActivityEmptyStateCustomAnimation({super.key});
+class ActivityEmptyStateCustom extends StatelessWidget {
+  const ActivityEmptyStateCustom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,12 +53,12 @@ class _CustomAnimationState extends State<_CustomAnimation>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(seconds: 2),
     )..repeat(reverse: true);
 
     final curvedAnimation = CurvedAnimation(
       parent: animationController,
-      curve: Curves.easeInOutQuad,
+      curve: Curves.easeInOutCubic,
     );
 
     slideAnimation = Tween<double>(
@@ -75,7 +75,7 @@ class _CustomAnimationState extends State<_CustomAnimation>
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-      double size = constraints.maxWidth / 2;
+      double size = constraints.maxWidth * 0.55;
 
       return AspectRatio(
         aspectRatio: 1,

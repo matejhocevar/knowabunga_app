@@ -27,7 +27,7 @@ class ActivityDetailsView extends StatelessWidget {
     Widget? body;
 
     if (activity == null) {
-      body = Container();
+      body = const Placeholder(); // TODO(matej): Fix asap
     } else {
       body = _ActivityDetails(activity: activity!);
     }
