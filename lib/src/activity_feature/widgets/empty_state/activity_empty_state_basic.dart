@@ -21,7 +21,7 @@ class ActivityEmptyStateBasic extends StatelessWidget {
           const SizedBox(height: 16),
           Image.asset(
             'assets/gifs/pulp-fiction-john-travolta.gif',
-            width: screenWidth / 2,
+            width: screenWidth * 0.75,
             fit: BoxFit.fitHeight,
           ),
         ],
