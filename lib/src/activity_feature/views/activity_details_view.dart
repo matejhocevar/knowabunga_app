@@ -27,7 +27,7 @@ class ActivityDetailsView extends StatelessWidget {
     Widget? body;
 
     if (activity == null) {
-      body = const Placeholder(); // TODO(matej): Fix asap
+      body = const ActivityEmptyStateCustom();
     } else {
       body = _ActivityDetails(activity: activity!);
     }
